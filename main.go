@@ -1,15 +1,20 @@
 package main
 
 import (
-	"net/http"
+
+    "net/http"
+  
 )
 
 func main() {
 	// Set up static file server
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 
+	http.HandleFunc("/", homeHandler)
+    http.HandleFunc("/list-vms", listVMsHandler)
+
 	// Set up route handlers
-	http.HandleFunc("/", loginHandler)
+	//http.HandleFunc("/", loginHandler)
 
 	port := ":8080"
 	println("Server starting at http://localhost" + port)
