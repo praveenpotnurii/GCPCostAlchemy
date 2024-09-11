@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cost Recommendation Tool</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; }
+        h1 { color: #333; }
+        form { margin-top: 20px; }
+        select, button { font-size: 16px; padding: 5px 10px; }
+        button { background-color: #4CAF50; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #45a049; }
+    </style>
+</head>
+<body>
+    <h1>Cost Recommendation Tool</h1>
+    <form action="/cost-recommendations" method="POST">
+        <label for="project">Select a project:</label>
+        <select name="project" id="project">
+            {{range .}}
+                <option value="{{.}}">{{.}}</option>
+            {{end}}
+        </select>
+        <button type="submit">Get Recommendations</button>
+    </form>
+</body>
+</html>

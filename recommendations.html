@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cost Recommendations</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; }
+        h1, h2 { color: #333; }
+        ul { list-style-type: none; padding: 0; }
+        li { margin-bottom: 10px; }
+        a { color: #4CAF50; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>Cost Recommendations</h1>
+    <h2>Project: {{.ProjectID}}</h2>
+
+    {{if eq (len .Recommendations) 0}}
+        <p>No cost recommendations found.</p>
+    {{else}}
+        <ul>
+        {{range .Recommendations}}
+            <li>{{.}}</li>
+        {{end}}
+        </ul>
+    {{end}}
+
+    <a href="/">Back to Home</a>
+</body>
+</html>

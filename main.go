@@ -1,25 +1,31 @@
 package main
 
 import (
-
+    "log"
     "net/http"
-  
+    "os"
+
+    _ "google.golang.org/api/cloudresourcemanager/v1"
 )
 
-func main() {
-	// Set up static file server
-	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
+var logger *log.Logger
 
-	http.HandleFunc("/", homeHandler)
-    http.HandleFunc("/list-vms", listVMsHandler)
-
-	// Set up route handlers
-	//http.HandleFunc("/", loginHandler)
-
-	port := ":8080"
-	println("Server starting at http://localhost" + port)
-	if err := http.ListenAndServe(port, nil); err != nil {
-		println("Error starting server:", err.Error())
-	}
+func init() {
+    // Set up logging
+    logFile, err := os.OpenFile("app.log", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
+    if err != nil {
+        log.Fatal("Failed to open log file:", err)
+    }
+    logger = log.New(logFile, "", log.Ldate|log.Ltime|log.Lshortfile)
 }
 
+func main() {
+    http.HandleFunc("/", homeHandler)
+    http.HandleFunc("/cost-recommendations", costRecommendationsHandler)
+
+    port := ":8080"
+    logger.Println("Server starting at http://localhost" + port)
+    if err := http.ListenAndServe(port, nil); err != nil {
+        logger.Fatalf("Error starting server: %v", err)
+    }
+}

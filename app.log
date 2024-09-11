@@ -1,0 +1,605 @@
+2024/09/11 21:45:22 handlers.go:34: Received request to list VM instances
+2024/09/11 21:45:22 handlers.go:58: Starting listVMInstances function
+2024/09/11 21:45:22 handlers.go:98: Listing VM instances for project: ops-inf1
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: bomr-ui, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-b
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic1-warm, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-a
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic4-warm, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-a
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic5-warm, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-a
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic6-warm, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-a
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic7-warm, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-a
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic8-warm, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-a
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic9-warm, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-a
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: alto-jumper, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: diffy, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: epc-ui-nonprod, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: epc-ui-noprod, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: gcds-v2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: gke-stage-apm-core-1-3e22c819-78pw, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: gke-stage-apm-core-1-3e22c819-p6dh, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: http-proxy-nonprod, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: http-proxy-noprod, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: ipa1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: ipa2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: mlisa-deploy-bastion, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: netbox, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: ops-ai-apps, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-msp-parser41, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: proxyldap-us-central1-a-0s0x, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: proxyldap-us-central1-a-t0gn, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: rundeck-prod, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: sso2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: vpn-2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic3-warm, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-c
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: devops-tools1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: epc-ui, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: epc-ui-prod, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: gcds, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: http-proxy, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: http-proxy-prod, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: id1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: id2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: jenkins-prod-vm, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: jira-migration-01, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: jumpi, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: jumpi-server, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: kumo-nocmetrics, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: master-icinga, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: master2-icinga, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-msp-grafana, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-msp-prometheus, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: selenium-dev, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: selenium-prod1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: selenium-prod2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: sso, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: sso1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: stage-master-icinga, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: stage-master2-icinga, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: stage-msp-elastic-master1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: stage-msp-elastic-master2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: stage-msp-elastic-master3, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: stage-msp-elastic1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: stage-msp-elastic2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: stage-msp-elastic4, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: stage-msp-elastic5, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: stage-msp-grafana, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: stage-msp-kibana, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: stage-msp-parser1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: stage-msp-parser2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: stage-msp-prometheus, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: vpn-1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: warlock-prod, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic-master1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic-master2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic-master3, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic2-warm, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic3, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic4, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic5, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic6, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic7, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-eu-apm-kibana, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-eu-apm-parser1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-eu-apm-parser2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-eu-apm-parser3, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-eu-apm-parser4, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-eu-apm-parser5, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-eu-apm-parser6, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-eu-apm-parser7, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: gke-cert-manager-prod-v2-core-2-afe95a61-7sua, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: gke-cert-manager-prod-v2-core-2-afe95a61-zrnf, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: gke-prod-apm-core-1-64c650d0-0y0d, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: gke-prod-apm-core-1-64c650d0-3k33, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: gke-prod-apm-core-1-64c650d0-ii6x, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: gke-prod-apm-core-1-64c650d0-l9rf, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: gke-prod-apm-core-1-64c650d0-xwh6, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: ntp1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: ntp2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: ops-ai, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-msp-elastic-master1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-msp-elastic-master2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-msp-elastic-master3, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-msp-hot-elastic1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-msp-hot-elastic10, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-msp-hot-elastic11, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-msp-hot-elastic12, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-msp-hot-elastic2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-msp-hot-elastic3, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-msp-hot-elastic4, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-msp-hot-elastic5, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-msp-hot-elastic6, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-msp-hot-elastic7, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-msp-hot-elastic8, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-msp-hot-elastic9, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-msp-kibana1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-msp-parser1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-msp-parser2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-msp-parser31, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-msp-parser5, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-msp-parser6, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-msp-parser7, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-msp-warm-elastic1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-msp-warm-elastic10, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-msp-warm-elastic11, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-msp-warm-elastic12, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-msp-warm-elastic13, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-msp-warm-elastic14, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-msp-warm-elastic2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-msp-warm-elastic3, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-msp-warm-elastic4, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-msp-warm-elastic5, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-msp-warm-elastic6, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-msp-warm-elastic7, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-msp-warm-elastic8, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: prod-msp-warm-elastic9, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:109: Found VM instance: Name: sjumpi, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:45:24 handlers.go:118: Found 133 VM instances
+2024/09/11 21:45:24 handlers.go:187: Rendering VM instances
+2024/09/11 21:45:24 handlers.go:29: Received request for home page
+2024/09/11 21:49:05 handlers.go:46: Received request to list cost recommendations
+2024/09/11 21:49:05 handlers.go:123: Starting listCostRecommendations function
+2024/09/11 21:49:05 handlers.go:164: Listing cost recommendations for project: ops-inf1
+2024/09/11 21:49:06 handlers.go:182: Found 0 active cost recommendations
+2024/09/11 21:49:06 handlers.go:201: Rendering cost recommendations
+2024/09/11 21:49:06 handlers.go:29: Received request for home page
+2024/09/11 21:57:23 handlers.go:46: Received request to list cost recommendations
+2024/09/11 21:57:23 handlers.go:123: Starting listCostRecommendations function
+2024/09/11 21:57:23 handlers.go:164: Listing cost recommendations for project: ops-inf1
+2024/09/11 21:57:24 handlers.go:182: Found 0 active cost recommendations
+2024/09/11 21:57:24 handlers.go:201: Rendering cost recommendations
+2024/09/11 21:57:24 handlers.go:29: Received request for home page
+2024/09/11 21:57:32 handlers.go:29: Received request for home page
+2024/09/11 21:57:32 handlers.go:29: Received request for home page
+2024/09/11 21:57:35 handlers.go:46: Received request to list cost recommendations
+2024/09/11 21:57:35 handlers.go:123: Starting listCostRecommendations function
+2024/09/11 21:57:35 handlers.go:164: Listing cost recommendations for project: ops-inf1
+2024/09/11 21:57:36 handlers.go:182: Found 0 active cost recommendations
+2024/09/11 21:57:36 handlers.go:201: Rendering cost recommendations
+2024/09/11 21:57:36 handlers.go:29: Received request for home page
+2024/09/11 21:57:38 handlers.go:29: Received request for home page
+2024/09/11 21:57:39 handlers.go:34: Received request to list VM instances
+2024/09/11 21:57:39 handlers.go:58: Starting listVMInstances function
+2024/09/11 21:57:39 handlers.go:98: Listing VM instances for project: ops-inf1
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: gke-cert-manager-prod-v2-core-2-afe95a61-7sua, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: gke-cert-manager-prod-v2-core-2-afe95a61-zrnf, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: gke-prod-apm-core-1-64c650d0-0y0d, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: gke-prod-apm-core-1-64c650d0-3k33, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: gke-prod-apm-core-1-64c650d0-ii6x, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: gke-prod-apm-core-1-64c650d0-l9rf, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: gke-prod-apm-core-1-64c650d0-xwh6, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: ntp1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: ntp2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: ops-ai, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-msp-elastic-master1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-msp-elastic-master2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-msp-elastic-master3, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-msp-hot-elastic1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-msp-hot-elastic10, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-msp-hot-elastic11, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-msp-hot-elastic12, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-msp-hot-elastic2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-msp-hot-elastic3, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-msp-hot-elastic4, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-msp-hot-elastic5, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-msp-hot-elastic6, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-msp-hot-elastic7, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-msp-hot-elastic8, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-msp-hot-elastic9, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-msp-kibana1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-msp-parser1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-msp-parser2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-msp-parser31, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-msp-parser5, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-msp-parser6, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-msp-parser7, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-msp-warm-elastic1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-msp-warm-elastic10, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-msp-warm-elastic11, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-msp-warm-elastic12, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-msp-warm-elastic13, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-msp-warm-elastic14, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-msp-warm-elastic2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-msp-warm-elastic3, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-msp-warm-elastic4, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-msp-warm-elastic5, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-msp-warm-elastic6, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-msp-warm-elastic7, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-msp-warm-elastic8, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-msp-warm-elastic9, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: sjumpi, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic1-warm, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-a
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic4-warm, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-a
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic5-warm, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-a
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic6-warm, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-a
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic7-warm, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-a
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic8-warm, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-a
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic9-warm, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-a
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic-master1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic-master2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic-master3, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic2-warm, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic3, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic4, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic5, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic6, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic7, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-eu-apm-kibana, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-eu-apm-parser1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-eu-apm-parser2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-eu-apm-parser3, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-eu-apm-parser4, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-eu-apm-parser5, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-eu-apm-parser6, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-eu-apm-parser7, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: bomr-ui, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-b
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic3-warm, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-c
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: alto-jumper, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: diffy, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: epc-ui-nonprod, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: epc-ui-noprod, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: gcds-v2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: gke-stage-apm-core-1-3e22c819-78pw, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: gke-stage-apm-core-1-3e22c819-p6dh, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: http-proxy-nonprod, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: http-proxy-noprod, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: ipa1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: ipa2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: mlisa-deploy-bastion, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: netbox, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: ops-ai-apps, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-msp-parser41, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: proxyldap-us-central1-a-0s0x, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: proxyldap-us-central1-a-t0gn, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: rundeck-prod, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: sso2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: vpn-2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: devops-tools1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: epc-ui, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: epc-ui-prod, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: gcds, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: http-proxy, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: http-proxy-prod, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: id1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: id2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: jenkins-prod-vm, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: jira-migration-01, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: jumpi, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: jumpi-server, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: kumo-nocmetrics, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: master-icinga, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: master2-icinga, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-msp-grafana, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: prod-msp-prometheus, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: selenium-dev, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: selenium-prod1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: selenium-prod2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: sso, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: sso1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: stage-master-icinga, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: stage-master2-icinga, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: stage-msp-elastic-master1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: stage-msp-elastic-master2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: stage-msp-elastic-master3, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: stage-msp-elastic1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: stage-msp-elastic2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: stage-msp-elastic4, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: stage-msp-elastic5, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: stage-msp-grafana, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: stage-msp-kibana, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: stage-msp-parser1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: stage-msp-parser2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: stage-msp-prometheus, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: vpn-1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:57:42 handlers.go:109: Found VM instance: Name: warlock-prod, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:57:42 handlers.go:118: Found 133 VM instances
+2024/09/11 21:57:42 handlers.go:187: Rendering VM instances
+2024/09/11 21:57:42 handlers.go:29: Received request for home page
+2024/09/11 21:57:43 handlers.go:29: Received request for home page
+2024/09/11 21:57:44 handlers.go:29: Received request for home page
+2024/09/11 21:57:44 handlers.go:29: Received request for home page
+2024/09/11 21:57:53 handlers.go:29: Received request for home page
+2024/09/11 21:57:53 handlers.go:29: Received request for home page
+2024/09/11 21:58:40 handlers.go:29: Received request for home page
+2024/09/11 21:58:40 handlers.go:29: Received request for home page
+2024/09/11 21:58:41 handlers.go:34: Received request to list VM instances
+2024/09/11 21:58:41 handlers.go:58: Starting listVMInstances function
+2024/09/11 21:58:41 handlers.go:98: Listing VM instances for project: ops-inf1
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic1-warm, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-a
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic4-warm, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-a
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic5-warm, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-a
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic6-warm, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-a
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic7-warm, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-a
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic8-warm, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-a
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic9-warm, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-a
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: bomr-ui, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-b
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: devops-tools1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: epc-ui, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: epc-ui-prod, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: gcds, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: http-proxy, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: http-proxy-prod, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: id1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: id2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: jenkins-prod-vm, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: jira-migration-01, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: jumpi, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: jumpi-server, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: kumo-nocmetrics, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: master-icinga, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: master2-icinga, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-msp-grafana, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-msp-prometheus, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: selenium-dev, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: selenium-prod1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: selenium-prod2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: sso, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: sso1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: stage-master-icinga, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: stage-master2-icinga, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: stage-msp-elastic-master1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: stage-msp-elastic-master2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: stage-msp-elastic-master3, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: stage-msp-elastic1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: stage-msp-elastic2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: stage-msp-elastic4, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: stage-msp-elastic5, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: stage-msp-grafana, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: stage-msp-kibana, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: stage-msp-parser1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: stage-msp-parser2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: stage-msp-prometheus, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: vpn-1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: warlock-prod, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-c
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic3-warm, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-c
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic-master1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic-master2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic-master3, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic2-warm, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic3, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic4, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic5, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic6, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-eu-apm-elastic7, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-eu-apm-kibana, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-eu-apm-parser1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-eu-apm-parser2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-eu-apm-parser3, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-eu-apm-parser4, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-eu-apm-parser5, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-eu-apm-parser6, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-eu-apm-parser7, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/europe-west3-b
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: alto-jumper, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: diffy, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: epc-ui-nonprod, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: epc-ui-noprod, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: gcds-v2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: gke-stage-apm-core-1-3e22c819-78pw, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: gke-stage-apm-core-1-3e22c819-p6dh, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: http-proxy-nonprod, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: http-proxy-noprod, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: ipa1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: ipa2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: mlisa-deploy-bastion, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: netbox, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: ops-ai-apps, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-msp-parser41, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: proxyldap-us-central1-a-0s0x, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: proxyldap-us-central1-a-t0gn, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: rundeck-prod, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: sso2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: vpn-2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-a
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: gke-cert-manager-prod-v2-core-2-afe95a61-7sua, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: gke-cert-manager-prod-v2-core-2-afe95a61-zrnf, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: gke-prod-apm-core-1-64c650d0-0y0d, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: gke-prod-apm-core-1-64c650d0-3k33, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: gke-prod-apm-core-1-64c650d0-ii6x, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: gke-prod-apm-core-1-64c650d0-l9rf, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: gke-prod-apm-core-1-64c650d0-xwh6, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: ntp1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: ntp2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: ops-ai, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-msp-elastic-master1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-msp-elastic-master2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-msp-elastic-master3, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-msp-hot-elastic1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-msp-hot-elastic10, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-msp-hot-elastic11, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-msp-hot-elastic12, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-msp-hot-elastic2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-msp-hot-elastic3, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-msp-hot-elastic4, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-msp-hot-elastic5, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-msp-hot-elastic6, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-msp-hot-elastic7, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-msp-hot-elastic8, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-msp-hot-elastic9, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-msp-kibana1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-msp-parser1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-msp-parser2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-msp-parser31, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-msp-parser5, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-msp-parser6, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-msp-parser7, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-msp-warm-elastic1, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-msp-warm-elastic10, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-msp-warm-elastic11, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-msp-warm-elastic12, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-msp-warm-elastic13, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-msp-warm-elastic14, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-msp-warm-elastic2, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-msp-warm-elastic3, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-msp-warm-elastic4, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-msp-warm-elastic5, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-msp-warm-elastic6, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-msp-warm-elastic7, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-msp-warm-elastic8, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: prod-msp-warm-elastic9, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:109: Found VM instance: Name: sjumpi, Zone: https://www.googleapis.com/compute/v1/projects/ops-inf1/zones/us-central1-f
+2024/09/11 21:58:44 handlers.go:118: Found 133 VM instances
+2024/09/11 21:58:44 handlers.go:187: Rendering VM instances
+2024/09/11 21:58:44 handlers.go:29: Received request for home page
+2024/09/11 21:58:46 handlers.go:29: Received request for home page
+2024/09/11 21:58:47 handlers.go:46: Received request to list cost recommendations
+2024/09/11 21:58:47 handlers.go:123: Starting listCostRecommendations function
+2024/09/11 21:58:47 handlers.go:164: Listing cost recommendations for project: ops-inf1
+2024/09/11 21:58:48 handlers.go:182: Found 0 active cost recommendations
+2024/09/11 21:58:48 handlers.go:201: Rendering cost recommendations
+2024/09/11 21:58:48 handlers.go:29: Received request for home page
+2024/09/11 21:58:50 handlers.go:29: Received request for home page
+2024/09/11 21:58:50 handlers.go:29: Received request for home page
+2024/09/11 21:58:50 handlers.go:29: Received request for home page
+2024/09/11 22:01:45 handlers.go:216: Received request for login page
+2024/09/11 22:01:45 handlers.go:228: Starting listProjects function
+2024/09/11 22:01:47 handlers.go:278: Found 48 projects
+2024/09/11 22:01:47 handlers.go:283: Rendering login page
+2024/09/11 22:01:56 handlers.go:216: Received request for login page
+2024/09/11 22:01:56 handlers.go:228: Starting listProjects function
+2024/09/11 22:01:58 handlers.go:278: Found 48 projects
+2024/09/11 22:01:58 handlers.go:283: Rendering login page
+2024/09/11 22:02:04 handlers.go:216: Received request for login page
+2024/09/11 22:02:04 handlers.go:228: Starting listProjects function
+2024/09/11 22:02:06 handlers.go:278: Found 48 projects
+2024/09/11 22:02:06 handlers.go:283: Rendering login page
+2024/09/11 22:04:08 handlers.go:216: Received request for login page
+2024/09/11 22:04:08 handlers.go:228: Starting listProjects function
+2024/09/11 22:04:10 handlers.go:278: Found 48 projects
+2024/09/11 22:04:10 handlers.go:283: Rendering login page
+2024/09/11 22:04:17 handlers.go:216: Received request for login page
+2024/09/11 22:04:17 handlers.go:228: Starting listProjects function
+2024/09/11 22:04:19 handlers.go:278: Found 48 projects
+2024/09/11 22:04:19 handlers.go:283: Rendering login page
+2024/09/11 22:49:42 handlers.go:29: Received request for home page
+2024/09/11 22:49:42 handlers.go:126: Starting listProjects function
+2024/09/11 22:49:44 handlers.go:176: Found 48 projects
+2024/09/11 22:49:44 handlers.go:181: Rendering home page
+2024/09/11 22:49:49 handlers.go:41: Received request to list cost recommendations
+2024/09/11 22:49:49 handlers.go:65: Starting listCostRecommendations function
+2024/09/11 22:49:49 handlers.go:104: Listing cost recommendations for project: alto-int-dev
+2024/09/11 22:49:50 handlers.go:122: Found 0 active cost recommendations
+2024/09/11 22:49:50 handlers.go:195: Rendering cost recommendations
+2024/09/11 22:49:53 handlers.go:29: Received request for home page
+2024/09/11 22:49:53 handlers.go:126: Starting listProjects function
+2024/09/11 22:49:55 handlers.go:176: Found 48 projects
+2024/09/11 22:49:55 handlers.go:181: Rendering home page
+2024/09/11 22:49:59 handlers.go:41: Received request to list cost recommendations
+2024/09/11 22:49:59 handlers.go:65: Starting listCostRecommendations function
+2024/09/11 22:49:59 handlers.go:104: Listing cost recommendations for project: alto-qa
+2024/09/11 22:49:59 handlers.go:122: Found 0 active cost recommendations
+2024/09/11 22:49:59 handlers.go:195: Rendering cost recommendations
+2024/09/11 22:50:02 handlers.go:29: Received request for home page
+2024/09/11 22:50:02 handlers.go:126: Starting listProjects function
+2024/09/11 22:50:04 handlers.go:176: Found 48 projects
+2024/09/11 22:50:04 handlers.go:181: Rendering home page
+2024/09/11 22:50:09 handlers.go:41: Received request to list cost recommendations
+2024/09/11 22:50:09 handlers.go:65: Starting listCostRecommendations function
+2024/09/11 22:50:09 handlers.go:104: Listing cost recommendations for project: ops-alto-prod
+2024/09/11 22:50:11 handlers.go:122: Found 0 active cost recommendations
+2024/09/11 22:50:11 handlers.go:195: Rendering cost recommendations
+2024/09/11 22:50:14 handlers.go:29: Received request for home page
+2024/09/11 22:50:14 handlers.go:126: Starting listProjects function
+2024/09/11 22:50:16 handlers.go:176: Found 48 projects
+2024/09/11 22:50:16 handlers.go:181: Rendering home page
+2024/09/11 22:50:20 handlers.go:41: Received request to list cost recommendations
+2024/09/11 22:50:20 handlers.go:65: Starting listCostRecommendations function
+2024/09/11 22:50:20 handlers.go:104: Listing cost recommendations for project: alto-dev-200221
+2024/09/11 22:50:21 handlers.go:122: Found 0 active cost recommendations
+2024/09/11 22:50:21 handlers.go:195: Rendering cost recommendations
+2024/09/11 22:50:23 handlers.go:29: Received request for home page
+2024/09/11 22:50:23 handlers.go:126: Starting listProjects function
+2024/09/11 22:50:25 handlers.go:176: Found 48 projects
+2024/09/11 22:50:25 handlers.go:181: Rendering home page
+2024/09/11 22:50:42 handlers.go:41: Received request to list cost recommendations
+2024/09/11 22:50:42 handlers.go:65: Starting listCostRecommendations function
+2024/09/11 22:50:42 handlers.go:104: Listing cost recommendations for project: ops-apr-prod
+2024/09/11 22:50:43 handlers.go:122: Found 0 active cost recommendations
+2024/09/11 22:50:43 handlers.go:195: Rendering cost recommendations
+2024/09/11 22:53:30 handlers.go:29: Received request for home page
+2024/09/11 22:53:30 handlers.go:141: Starting listProjects function
+2024/09/11 22:53:32 handlers.go:191: Found 48 projects
+2024/09/11 22:53:32 handlers.go:196: Rendering home page
+2024/09/11 22:53:36 handlers.go:41: Received request to list cost recommendations
+2024/09/11 22:53:36 handlers.go:65: Starting listCostRecommendations function
+2024/09/11 22:53:36 handlers.go:117: Fetching recommendations for project: ops-apr-prod, location: global, recommender: google.compute.instance.MachineTypeRecommender
+2024/09/11 22:53:37 handlers.go:117: Fetching recommendations for project: ops-apr-prod, location: global, recommender: google.compute.disk.IdleResourceRecommender
+2024/09/11 22:53:37 handlers.go:117: Fetching recommendations for project: ops-apr-prod, location: global, recommender: google.compute.commitment.UsageCommitmentRecommender
+2024/09/11 22:53:38 handlers.go:136: Found 0 recommendations in total
+2024/09/11 22:53:38 handlers.go:210: Rendering cost recommendations
+2024/09/11 22:53:49 handlers.go:29: Received request for home page
+2024/09/11 22:53:49 handlers.go:141: Starting listProjects function
+2024/09/11 22:53:51 handlers.go:191: Found 48 projects
+2024/09/11 22:53:51 handlers.go:196: Rendering home page
+2024/09/11 22:53:59 handlers.go:41: Received request to list cost recommendations
+2024/09/11 22:53:59 handlers.go:65: Starting listCostRecommendations function
+2024/09/11 22:53:59 handlers.go:117: Fetching recommendations for project: alto-dev-200221, location: global, recommender: google.compute.instance.MachineTypeRecommender
+2024/09/11 22:54:00 handlers.go:117: Fetching recommendations for project: alto-dev-200221, location: global, recommender: google.compute.disk.IdleResourceRecommender
+2024/09/11 22:54:01 handlers.go:117: Fetching recommendations for project: alto-dev-200221, location: global, recommender: google.compute.commitment.UsageCommitmentRecommender
+2024/09/11 22:54:02 handlers.go:136: Found 0 recommendations in total
+2024/09/11 22:54:02 handlers.go:210: Rendering cost recommendations
+2024/09/12 01:18:47 handlers.go:41: Received request to list cost recommendations
+2024/09/12 01:18:47 handlers.go:65: Starting listCostRecommendations function
+2024/09/12 01:18:47 handlers.go:117: Fetching recommendations for project: alto-dev-200221, location: global, recommender: google.compute.instance.MachineTypeRecommender
+2024/09/12 01:18:48 handlers.go:117: Fetching recommendations for project: alto-dev-200221, location: global, recommender: google.compute.disk.IdleResourceRecommender
+2024/09/12 01:18:48 handlers.go:117: Fetching recommendations for project: alto-dev-200221, location: global, recommender: google.compute.commitment.UsageCommitmentRecommender
+2024/09/12 01:18:49 handlers.go:136: Found 0 recommendations in total
+2024/09/12 01:18:49 handlers.go:210: Rendering cost recommendations
+2024/09/12 01:18:54 handlers.go:29: Received request for home page
+2024/09/12 01:18:54 handlers.go:141: Starting listProjects function
+2024/09/12 01:18:56 handlers.go:191: Found 48 projects
+2024/09/12 01:18:56 handlers.go:196: Rendering home page
+2024/09/12 01:19:03 handlers.go:41: Received request to list cost recommendations
+2024/09/12 01:19:03 handlers.go:65: Starting listCostRecommendations function
+2024/09/12 01:19:03 handlers.go:117: Fetching recommendations for project: ops-iot-prod, location: global, recommender: google.compute.instance.MachineTypeRecommender
+2024/09/12 01:19:04 handlers.go:117: Fetching recommendations for project: ops-iot-prod, location: global, recommender: google.compute.disk.IdleResourceRecommender
+2024/09/12 01:19:05 handlers.go:117: Fetching recommendations for project: ops-iot-prod, location: global, recommender: google.compute.commitment.UsageCommitmentRecommender
+2024/09/12 01:19:06 handlers.go:136: Found 0 recommendations in total
+2024/09/12 01:19:06 handlers.go:210: Rendering cost recommendations
+2024/09/12 01:38:15 main.go:27: Server starting at http://localhost:8080
+2024/09/12 01:38:25 handlers.go:18: Received request for home page
+2024/09/12 01:38:25 handlers.go:52: Starting listProjects function
+2024/09/12 01:38:27 handlers.go:106: Found 48 projects
+2024/09/12 01:41:03 main.go:27: Server starting at http://localhost:8080
+2024/09/12 01:41:15 handlers.go:18: Received request for home page
+2024/09/12 01:41:15 handlers.go:52: Starting listProjects function
+2024/09/12 01:41:17 handlers.go:106: Found 48 projects
+2024/09/12 01:46:46 main.go:27: Server starting at http://localhost:8080
+2024/09/12 01:46:52 handlers.go:18: Received request for home page
+2024/09/12 01:46:52 handlers.go:56: Starting listProjects function
+2024/09/12 01:46:54 handlers.go:110: Found 48 projects
+2024/09/12 01:47:00 handlers.go:115: Starting listCostRecommendations function
+2024/09/12 01:47:02 handlers.go:168: Found 0 recommendations in total for project ops-apr-prod
+2024/09/12 01:47:02 handlers.go:182: Error executing template: template: recommendations.html:20:9: executing "recommendations.html" at <len>: wrong number of args for len: want 1 got 3
+2024/09/12 01:50:37 main.go:27: Server starting at http://localhost:8080
+2024/09/12 01:50:59 handlers.go:18: Received request for home page
+2024/09/12 01:50:59 handlers.go:62: Starting listProjects function
+2024/09/12 01:51:01 handlers.go:116: Found 48 projects
+2024/09/12 01:51:07 handlers.go:121: Starting listCostRecommendations function
+2024/09/12 01:51:10 handlers.go:174: Found 0 recommendations in total for project alto-int-dev
+2024/09/12 01:51:32 handlers.go:18: Received request for home page
+2024/09/12 01:51:32 handlers.go:62: Starting listProjects function
+2024/09/12 01:51:34 handlers.go:116: Found 48 projects
+2024/09/12 01:51:40 handlers.go:121: Starting listCostRecommendations function
+2024/09/12 01:51:42 handlers.go:174: Found 0 recommendations in total for project alto-dev-200221
+2024/09/12 01:57:10 main.go:27: Server starting at http://localhost:8080
+2024/09/12 01:57:18 handlers.go:21: Received request for home page
+2024/09/12 01:57:18 handlers.go:65: Starting listProjects function
+2024/09/12 01:57:20 handlers.go:119: Found 48 projects
+2024/09/12 01:57:27 handlers.go:124: Starting listCostRecommendations function
+2024/09/12 01:57:30 handlers.go:186: Found 0 recommendations in total for project alto-dev-200221
+2024/09/12 01:57:32 handlers.go:21: Received request for home page
+2024/09/12 01:57:32 handlers.go:65: Starting listProjects function
+2024/09/12 01:57:33 handlers.go:119: Found 48 projects
+2024/09/12 01:57:51 handlers.go:124: Starting listCostRecommendations function
+2024/09/12 01:57:53 handlers.go:186: Found 0 recommendations in total for project alto-cicd
+2024/09/12 01:57:55 handlers.go:21: Received request for home page
+2024/09/12 01:57:55 handlers.go:65: Starting listProjects function
+2024/09/12 01:57:57 handlers.go:119: Found 48 projects
+2024/09/12 01:58:11 handlers.go:124: Starting listCostRecommendations function
+2024/09/12 01:58:13 handlers.go:186: Found 0 recommendations in total for project ops-alto-eu
+2024/09/12 01:58:16 handlers.go:21: Received request for home page
+2024/09/12 01:58:16 handlers.go:65: Starting listProjects function
+2024/09/12 01:58:17 handlers.go:119: Found 48 projects
