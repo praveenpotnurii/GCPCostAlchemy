@@ -70,9 +70,6 @@ func homeHandler(w http.ResponseWriter, r *http.Request) {
         return
     }
 
-    // Add "All Projects" option at the beginning of the slice
-    projects = append([]string{"All Projects"}, projects...)
-
     renderTemplate(w, "home.html", projects)
 }
 
@@ -99,52 +96,39 @@ func costRecommendationsHandler(w http.ResponseWriter, r *http.Request) {
         return
     }
 
-    var allRecommendations map[string]map[string]RecommenderSummary
-    var totalSavings float64
-
-    if projectID == "All Projects" {
-        projects, err := listProjects()
-        if err != nil {
-            logger.Printf("Error listing projects: %v", err)
-            http.Error(w, "Failed to list projects: "+err.Error(), http.StatusInternalServerError)
-            return
-        }
-
-        allRecommendations = make(map[string]map[string]RecommenderSummary)
-        for _, proj := range projects {
-            recommenderSummaries, err := listCostRecommendations(proj, creds)
-            if err != nil {
-                logger.Printf("Error listing cost recommendations for project %s: %v", proj, err)
-                continue
-            }
-            allRecommendations[proj] = recommenderSummaries
-            totalSavings += calculateTotalSavings(recommenderSummaries)
-        }
-    } else {
-        recommenderSummaries, err := listCostRecommendations(projectID, creds)
-        if err != nil {
-            logger.Printf("Error listing cost recommendations: %v", err)
-            http.Error(w, "Failed to list cost recommendations: "+err.Error(), http.StatusInternalServerError)
-            return
-        }
-        allRecommendations = map[string]map[string]RecommenderSummary{
-            projectID: recommenderSummaries,
-        }
-        totalSavings = calculateTotalSavings(recommenderSummaries)
+    recommenderSummaries, err := listCostRecommendations(projectID, creds)
+    if err != nil {
+        logger.Printf("Error listing cost recommendations: %v", err)
+        http.Error(w, "Failed to list cost recommendations: "+err.Error(), http.StatusInternalServerError)
+        return
     }
 
+    // Convert map to slice for sorting
+    summaries := make([]RecommenderSummary, 0, len(recommenderSummaries))
+    for _, summary := range recommenderSummaries {
+        summaries = append(summaries, summary)
+    }
+
+    // Sort summaries by total savings (descending order)
+    sort.Slice(summaries, func(i, j int) bool {
+        return summaries[i].TotalSavings > summaries[j].TotalSavings
+    })
+
+    totalSavings := calculateTotalSavings(summaries)
+
     data := struct {
-        ProjectID         string
-        AllRecommendations map[string]map[string]RecommenderSummary
-        TotalSavings      float64
+        ProjectID            string
+        RecommenderSummaries []RecommenderSummary
+        TotalSavings         float64
     }{
-        ProjectID:         projectID,
-        AllRecommendations: allRecommendations,
-        TotalSavings:      totalSavings,
+        ProjectID:            projectID,
+        RecommenderSummaries: summaries,
+        TotalSavings:         totalSavings,
     }
 
     renderTemplate(w, "recommendations.html", data)
 }
+
 func loadCredentials() ([]byte, error) {
     if serviceAccountKeyPath == "" {
         return nil, fmt.Errorf("SERVICE_ACCOUNT_KEY not set")
@@ -227,45 +211,18 @@ func listCostRecommendations(projectID string, creds []byte) (map[string]Recomme
     var wg sync.WaitGroup
 
     recommenderIDs := []string{
-        // Compute Engine
         "google.compute.instance.MachineTypeRecommender",
-        "google.compute.instance.IdleResourceRecommender",
         "google.compute.disk.IdleResourceRecommender",
-        "google.compute.address.IdleResourceRecommender",
         "google.compute.commitment.UsageCommitmentRecommender",
-        
-        // Cloud SQL
-        "google.cloudsql.instance.IdleRecommender",
-        "google.cloudsql.instance.OverprovisionedRecommender",
-        
-        // Cloud Storage
-        "google.storage.bucket.StorageClassRecommender",
-        
-        // BigQuery
-        "google.bigquery.capacityCommitments.CommitmentUtilizationRecommender",
-        
-        // Dataflow
-        "google.dataflow.job.RegionRecommender",
-        
-        // Cloud Bigtable
-        "google.bigtable.instance.ClusterUtilizationRecommender",
-        
-        // Cloud Spanner
-        "google.spanner.instance.CommitmentUtilizationRecommender",
-        
-        // GKE
-        "google.container.cluster.ResourceUtilizationRecommender",
-        
-        // Cloud Pub/Sub
-        "google.pubsub.subscription.TopicResourceRecommender",
-        
-        // IAM
-        "google.iam.policy.Recommender",
+        "google.compute.instance.IdleResourceRecommender",
     }
 
     semaphore := make(chan struct{}, 20) // Limit concurrent goroutines
 
     for _, location := range locations {
+        if !strings.HasPrefix(location, "us-") {
+            continue
+        }
         for _, recommenderID := range recommenderIDs {
             wg.Add(1)
             semaphore <- struct{}{} // Acquire semaphore
@@ -314,6 +271,7 @@ func listCostRecommendations(projectID string, creds []byte) (map[string]Recomme
     logger.Printf("Found recommendations for %d recommenders in project %s", len(recommenderSummaries), projectID)
     return recommenderSummaries, nil
 }
+
 
 func extractCostSavings(recommendation *recommenderpb.Recommendation) float64 {
     if recommendation.PrimaryImpact == nil {
