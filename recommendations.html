@@ -1,127 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cost Recommendations</title>
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            font-size: 18px;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
-        }
-        .container {
-            width: 70%;
-            margin: 0 auto;
-            padding: 40px 0;
-        }
-        .content {
-            background-color: #fff;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        h1, h2 {
-            color: #2c3e50;
-        }
-        h1 {
-            font-size: 2.5em;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 15px;
-            margin-bottom: 30px;
-        }
-        h2 {
-            font-size: 1.8em;
-            margin-bottom: 20px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 30px;
-        }
-        th, td {
-            padding: 15px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-        th {
-            background-color: #3498db;
-            color: #fff;
-            font-size: 1.1em;
-        }
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-        .total-row {
-            font-weight: bold;
-            background-color: #ecf0f1;
-            font-size: 1.1em;
-        }
-        .back-link {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 15px 25px;
-            background-color: #3498db;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-            font-size: 1.1em;
-        }
-        .back-link:hover {
-            background-color: #2980b9;
-        }
-        .no-recommendations {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            font-size: 1.1em;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="content">
-            <h1>Cost Recommendations</h1>
-            <h2>Project: {{.ProjectID}}</h2>
+::: container
+::: content
+# Cost Recommendations
 
-            {{if eq (len .RecommenderSummaries) 0}}
-                <div class="no-recommendations">
-                    <p>No cost recommendations found.</p>
-                </div>
-            {{else}}
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Recommender</th>
-                            <th>Total Savings (USD)</th>
-                            <th>Recommendation Count</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {{range .RecommenderSummaries}}
-                            <tr>
-                                <td>{{.Name}}</td>
-                                <td>${{printf "%.2f" .TotalSavings}}</td>
-                                <td>{{.RecommendationCount}}</td>
-                            </tr>
-                        {{end}}
-                        <tr class="total-row">
-                            <td>Total</td>
-                            <td>${{printf "%.2f" .TotalSavings}}</td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
+{{if eq .ProjectID "All Projects"}}
+    <h2>All Projects</h2>
+    {{range $projectID, $recommenderSummaries := .AllRecommendations}}
+        <h3>Project: {{$projectID}}</h3>
+        {{if eq (len $recommenderSummaries) 0}}
+            ::: no-recommendations
+            No cost recommendations found for this project.
+            :::
+        {{else}}
+            <table>
+                <tr>
+                    <th>Recommender</th>
+                    <th>Total Savings (USD)</th>
+                    <th>Recommendation Count</th>
+                </tr>
+                {{range $recommenderSummaries}}
+                <tr>
+                    <td>{{.Name}}</td>
+                    <td>${{printf "%.2f" .TotalSavings}}</td>
+                    <td>{{.RecommendationCount}}</td>
+                </tr>
+                {{end}}
+            </table>
+        {{end}}
+    {{end}}
+{{else}}
+    <h2>Project: {{.ProjectID}}</h2>
+    {{$recommenderSummaries := index .AllRecommendations .ProjectID}}
+    {{if eq (len $recommenderSummaries) 0}}
+        ::: no-recommendations
+        No cost recommendations found.
+        :::
+    {{else}}
+        <table>
+            <tr>
+                <th>Recommender</th>
+                <th>Total Savings (USD)</th>
+                <th>Recommendation Count</th>
+            </tr>
+            {{range $recommenderSummaries}}
+            <tr>
+                <td>{{.Name}}</td>
+                <td>${{printf "%.2f" .TotalSavings}}</td>
+                <td>{{.RecommendationCount}}</td>
+            </tr>
             {{end}}
+        </table>
+    {{end}}
+{{end}}
 
-            <a href="/" class="back-link">Back to Home</a>
-        </div>
-    </div>
-</body>
-</html>
+<h3>Total Potential Savings: ${{printf "%.2f" .TotalSavings}}</h3>
+
+<a href="/home" class="back-link">Back to Home</a>
+:::
+:::
