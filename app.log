@@ -603,3 +603,123 @@
 2024/09/12 01:58:16 handlers.go:21: Received request for home page
 2024/09/12 01:58:16 handlers.go:65: Starting listProjects function
 2024/09/12 01:58:17 handlers.go:119: Found 48 projects
+2024/09/12 10:36:35 main.go:27: Server starting at http://localhost:8080
+2024/09/12 10:36:49 handlers.go:21: Received request for home page
+2024/09/12 10:36:49 handlers.go:65: Starting listProjects function
+2024/09/12 10:36:51 handlers.go:119: Found 48 projects
+2024/09/12 10:38:26 handlers.go:124: Starting listCostRecommendations function
+2024/09/12 10:38:29 handlers.go:186: Found 0 recommendations in total for project ops-apr-prod
+2024/09/12 10:38:30 handlers.go:21: Received request for home page
+2024/09/12 10:38:30 handlers.go:65: Starting listProjects function
+2024/09/12 10:38:32 handlers.go:119: Found 48 projects
+2024/09/12 10:38:37 handlers.go:124: Starting listCostRecommendations function
+2024/09/12 10:38:39 handlers.go:186: Found 0 recommendations in total for project alto-dev-200221
+2024/09/12 10:45:59 main.go:27: Server starting at http://localhost:8080
+2024/09/12 10:46:08 handlers.go:21: Received request for home page
+2024/09/12 10:46:08 handlers.go:65: Starting listProjects function
+2024/09/12 10:46:10 handlers.go:119: Found 48 projects
+2024/09/12 10:46:19 handlers.go:124: Starting listCostRecommendations function
+2024/09/12 10:46:21 handlers.go:186: Found 0 recommendations in total for project alto-dev-200221
+2024/09/12 10:46:50 handlers.go:21: Received request for home page
+2024/09/12 10:46:50 handlers.go:65: Starting listProjects function
+2024/09/12 10:46:52 handlers.go:119: Found 48 projects
+2024/09/12 10:49:20 main.go:27: Server starting at http://localhost:8080
+2024/09/12 10:49:37 handlers.go:125: Starting listCostRecommendations function
+2024/09/12 10:49:40 handlers.go:187: Found 0 recommendations in total for project alto-dev-200221
+2024/09/12 10:50:25 handlers.go:21: Received request for home page
+2024/09/12 10:50:25 handlers.go:65: Starting listProjects function
+2024/09/12 10:50:27 handlers.go:120: Found 48 projects
+2024/09/12 10:50:51 handlers.go:125: Starting listCostRecommendations function
+2024/09/12 10:50:53 handlers.go:187: Found 0 recommendations in total for project ops-alto-prod
+2024/09/12 10:52:33 handlers.go:21: Received request for home page
+2024/09/12 10:52:33 handlers.go:65: Starting listProjects function
+2024/09/12 10:52:34 handlers.go:120: Found 48 projects
+2024/09/12 10:52:40 handlers.go:125: Starting listCostRecommendations function
+2024/09/12 10:52:42 handlers.go:187: Found 0 recommendations in total for project ops-alto-prod-mlisa-alto-extra
+2024/09/12 10:52:45 handlers.go:21: Received request for home page
+2024/09/12 10:52:45 handlers.go:65: Starting listProjects function
+2024/09/12 10:52:47 handlers.go:120: Found 48 projects
+2024/09/12 11:15:24 main.go:27: Server starting at http://localhost:8080
+2024/09/12 11:15:28 handlers.go:22: Received request for home page
+2024/09/12 11:15:28 handlers.go:71: Starting listProjects function
+2024/09/12 11:15:30 handlers.go:104: Found 48 projects
+2024/09/12 11:16:56 handlers.go:151: Found 1 recommendations in total for project alto-dev-200221
+2024/09/12 11:19:36 main.go:27: Server starting at http://localhost:8080
+2024/09/12 11:19:36 main.go:29: Error starting server: listen tcp :8080: bind: address already in use
+2024/09/12 11:20:05 main.go:27: Server starting at http://localhost:8080
+2024/09/12 11:20:28 main.go:27: Server starting at http://localhost:8080
+2024/09/12 11:20:40 handlers.go:22: Received request for home page
+2024/09/12 11:20:40 handlers.go:71: Starting listProjects function
+2024/09/12 11:20:41 handlers.go:104: Found 48 projects
+2024/09/12 11:22:06 handlers.go:151: Found 1 recommendations in total for project alto-dev-200221
+2024/09/12 11:28:43 main.go:27: Server starting at http://localhost:8080
+2024/09/12 11:29:01 handlers.go:22: Received request for home page
+2024/09/12 11:29:01 handlers.go:71: Starting listProjects function
+2024/09/12 11:29:02 handlers.go:104: Found 48 projects
+2024/09/12 11:30:48 handlers.go:152: Found 0 recommendations in total for project ops-inf1
+2024/09/12 11:31:00 handlers.go:22: Received request for home page
+2024/09/12 11:31:00 handlers.go:71: Starting listProjects function
+2024/09/12 11:31:02 handlers.go:104: Found 48 projects
+2024/09/12 11:32:42 handlers.go:152: Found 1 recommendations in total for project alto-dev-200221
+2024/09/12 11:37:21 handlers.go:22: Received request for home page
+2024/09/12 11:37:21 handlers.go:71: Starting listProjects function
+2024/09/12 11:37:23 handlers.go:104: Found 48 projects
+2024/09/12 11:39:19 handlers.go:152: Found 0 recommendations in total for project ops-alto-prod
+2024/09/12 11:41:36 main.go:27: Server starting at http://localhost:8080
+2024/09/12 11:41:49 handlers.go:22: Received request for home page
+2024/09/12 11:41:49 handlers.go:71: Starting listProjects function
+2024/09/12 11:41:51 handlers.go:104: Found 48 projects
+2024/09/12 11:48:00 main.go:27: Server starting at http://localhost:8080
+2024/09/12 11:48:05 handlers.go:22: Received request for home page
+2024/09/12 11:48:05 handlers.go:71: Starting listProjects function
+2024/09/12 11:48:07 handlers.go:104: Found 48 projects
+2024/09/12 11:49:50 handlers.go:156: Found 1 recommendations in total for project alto-dev-200221
+2024/09/12 11:53:11 handlers.go:22: Received request for home page
+2024/09/12 11:53:11 handlers.go:71: Starting listProjects function
+2024/09/12 11:53:13 handlers.go:104: Found 48 projects
+2024/09/12 12:02:58 handlers.go:156: Found 1 recommendations in total for project alto-dev-200221
+2024/09/12 12:08:57 main.go:27: Server starting at http://localhost:8080
+2024/09/12 12:09:07 handlers.go:22: Received request for home page
+2024/09/12 12:09:07 handlers.go:71: Starting listProjects function
+2024/09/12 12:09:10 handlers.go:104: Found 48 projects
+2024/09/12 12:09:19 handlers.go:54: Error listing cost recommendations: failed to list regions and zones: failed to list regions and zones: failed to list zones for region africa-south1: googleapi: Error 400: Invalid value for field 'filter': 'region = https://www.googleapis.com/compute/v1/projects/alto-dev-200221/regions/africa-south1'. Invalid list filter expression., invalid
+2024/09/12 12:11:52 main.go:27: Server starting at http://localhost:8080
+2024/09/12 12:12:03 handlers.go:23: Received request for home page
+2024/09/12 12:12:03 handlers.go:72: Starting listProjects function
+2024/09/12 12:12:05 handlers.go:105: Found 48 projects
+2024/09/12 12:17:38 handlers.go:153: Found 30 recommendations in total for project alto-dev-200221
+2024/09/12 12:23:21 handlers.go:23: Received request for home page
+2024/09/12 12:23:21 handlers.go:72: Starting listProjects function
+2024/09/12 12:23:23 handlers.go:105: Found 48 projects
+2024/09/12 12:23:25 handlers.go:23: Received request for home page
+2024/09/12 12:23:25 handlers.go:72: Starting listProjects function
+2024/09/12 12:23:27 handlers.go:105: Found 48 projects
+2024/09/12 12:26:49 main.go:27: Server starting at http://localhost:8080
+2024/09/12 12:26:54 handlers.go:23: Received request for home page
+2024/09/12 12:26:54 handlers.go:72: Starting listProjects function
+2024/09/12 12:26:56 handlers.go:105: Found 48 projects
+2024/09/12 12:28:23 handlers.go:156: Found 0 recommendations in total for project ops-alto-eu
+2024/09/12 12:28:28 handlers.go:23: Received request for home page
+2024/09/12 12:28:28 handlers.go:72: Starting listProjects function
+2024/09/12 12:28:28 handlers.go:105: Found 48 projects
+2024/09/12 12:29:49 handlers.go:156: Found 30 recommendations in total for project alto-dev-200221
+2024/09/12 12:29:58 handlers.go:23: Received request for home page
+2024/09/12 12:29:58 handlers.go:72: Starting listProjects function
+2024/09/12 12:30:00 handlers.go:105: Found 48 projects
+2024/09/12 12:32:34 handlers.go:156: Found 13 recommendations in total for project ops-alto-prod
+2024/09/12 12:32:43 handlers.go:23: Received request for home page
+2024/09/12 12:32:43 handlers.go:72: Starting listProjects function
+2024/09/12 12:32:45 handlers.go:105: Found 48 projects
+2024/09/12 12:35:09 handlers.go:156: Found 21 recommendations in total for project alto-int-dev
+2024/09/12 12:36:08 handlers.go:23: Received request for home page
+2024/09/12 12:36:08 handlers.go:72: Starting listProjects function
+2024/09/12 12:36:09 handlers.go:105: Found 48 projects
+2024/09/12 12:36:12 handlers.go:23: Received request for home page
+2024/09/12 12:36:12 handlers.go:72: Starting listProjects function
+2024/09/12 12:36:14 handlers.go:105: Found 48 projects
+2024/09/12 12:38:54 main.go:27: Server starting at http://localhost:8080
+2024/09/12 12:38:54 main.go:29: Error starting server: listen tcp :8080: bind: address already in use
+2024/09/12 12:41:36 handlers.go:156: Found 13 recommendations in total for project ops-alto-prod
+2024/09/12 12:44:28 handlers.go:23: Received request for home page
+2024/09/12 12:44:28 handlers.go:72: Starting listProjects function
+2024/09/12 12:44:29 handlers.go:105: Found 48 projects
