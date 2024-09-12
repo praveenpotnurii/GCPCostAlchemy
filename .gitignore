@@ -3,3 +3,4 @@ app.log
 service.json
 shipwire.json
 service_account_key.json
+.DS_Store
