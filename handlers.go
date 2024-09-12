@@ -9,6 +9,7 @@ import (
     "net/http"
     "os"
     "strings"
+    "sync"
 
     "github.com/joho/godotenv"
     recommender "cloud.google.com/go/recommender/apiv1"
@@ -120,6 +121,8 @@ func listCostRecommendations(projectID string, creds []byte) ([]string, error) {
     }
 
     var allRecommendations []string
+    var mutex sync.Mutex
+    var wg sync.WaitGroup
 
     recommenderIDs := []string{
         "google.compute.instance.MachineTypeRecommender",
@@ -128,34 +131,49 @@ func listCostRecommendations(projectID string, creds []byte) ([]string, error) {
         "google.compute.instance.IdleResourceRecommender",
     }
 
+    semaphore := make(chan struct{}, 10) // Limit concurrent goroutines
+
     for _, location := range locations {
         if !strings.HasPrefix(location, "us-") {
             continue
         }
         for _, recommenderID := range recommenderIDs {
-            parent := fmt.Sprintf("projects/%s/locations/%s/recommenders/%s", projectID, location, recommenderID)
-            req := &recommenderpb.ListRecommendationsRequest{
-                Parent: parent,
-            }
+            wg.Add(1)
+            semaphore <- struct{}{} // Acquire semaphore
+            go func(loc, recID string) {
+                defer wg.Done()
+                defer func() { <-semaphore }() // Release semaphore
 
-            it := client.ListRecommendations(ctx, req)
-            for {
-                recommendation, err := it.Next()
-                if err == iterator.Done {
-                    break
+                parent := fmt.Sprintf("projects/%s/locations/%s/recommenders/%s", projectID, loc, recID)
+                req := &recommenderpb.ListRecommendationsRequest{
+                    Parent: parent,
                 }
-                if err != nil {
-                    logger.Printf("Error fetching recommendation for location %s and recommender %s: %v", location, recommenderID, err)
-                    continue
+
+                it := client.ListRecommendations(ctx, req)
+                for {
+                    recommendation, err := it.Next()
+                    if err == iterator.Done {
+                        break
+                    }
+                    if err != nil {
+                        logger.Printf("Error fetching recommendation for location %s and recommender %s: %v", loc, recID, err)
+                        continue
+                    }
+                    recString := fmt.Sprintf("Location: %s, Recommender: %s, Description: %s, Priority: %s", loc, recID, recommendation.Description, recommendation.Priority)
+                    mutex.Lock()
+                    allRecommendations = append(allRecommendations, recString)
+                    mutex.Unlock()
                 }
-                allRecommendations = append(allRecommendations, fmt.Sprintf("Location: %s, Recommender: %s, Description: %s, Priority: %s", location, recommenderID, recommendation.Description, recommendation.Priority))
-            }
+            }(location, recommenderID)
         }
     }
+
+    wg.Wait()
 
     logger.Printf("Found %d recommendations in total for project %s", len(allRecommendations), projectID)
     return allRecommendations, nil
 }
+
 
 func listRegions(projectID string, creds []byte) ([]string, error) {
     ctx := context.Background()

@@ -723,3 +723,8 @@
 2024/09/12 12:44:28 handlers.go:23: Received request for home page
 2024/09/12 12:44:28 handlers.go:72: Starting listProjects function
 2024/09/12 12:44:29 handlers.go:105: Found 48 projects
+2024/09/12 13:25:47 main.go:27: Server starting at http://localhost:8080
+2024/09/12 13:25:55 handlers.go:24: Received request for home page
+2024/09/12 13:25:55 handlers.go:73: Starting listProjects function
+2024/09/12 13:25:57 handlers.go:106: Found 48 projects
+2024/09/12 13:26:18 handlers.go:173: Found 30 recommendations in total for project alto-dev-200221
