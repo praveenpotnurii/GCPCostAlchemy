@@ -1,2 +1,5 @@
 service.json.b64
 app.log
+service.json
+shipwire.json
+service_account_key.json

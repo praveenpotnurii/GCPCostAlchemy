@@ -20,7 +20,8 @@ func init() {
 }
 
 func main() {
-    http.HandleFunc("/", homeHandler)
+    http.HandleFunc("/", landingHandler)
+    http.HandleFunc("/home", homeHandler)
     http.HandleFunc("/cost-recommendations", costRecommendationsHandler)
 
     port := ":8080"

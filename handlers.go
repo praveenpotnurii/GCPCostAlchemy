@@ -1,19 +1,16 @@
 package main
 
 import (
+    "path/filepath"
     "context"
     "encoding/base64"
     "fmt"
     "html/template"
     "io/ioutil"
     "net/http"
-    "os"
     "strings"
     "sync"
     "sort"
-
-
-    "github.com/joho/godotenv"
     recommender "cloud.google.com/go/recommender/apiv1"
     recommenderpb "google.golang.org/genproto/googleapis/cloud/recommender/v1"
     "google.golang.org/api/iterator"
@@ -22,7 +19,49 @@ import (
     compute "google.golang.org/api/compute/v1"
 )
 
+var serviceAccountKeyPath string
+
+func landingHandler(w http.ResponseWriter, r *http.Request) {
+    if r.Method == http.MethodPost {
+        file, _, err := r.FormFile("service_account_key")
+        if err != nil {
+            http.Error(w, "Failed to get uploaded file: "+err.Error(), http.StatusBadRequest)
+            return
+        }
+        defer file.Close()
+
+        // Read the file content
+        content, err := ioutil.ReadAll(file)
+        if err != nil {
+            http.Error(w, "Failed to read uploaded file: "+err.Error(), http.StatusInternalServerError)
+            return
+        }
+
+        // Encode the content to base64
+        encodedContent := base64.StdEncoding.EncodeToString(content)
+
+        // Save the encoded content to a file
+        serviceAccountKeyPath = filepath.Join(".", "service_account_key.json")
+        err = ioutil.WriteFile(serviceAccountKeyPath, []byte(encodedContent), 0644)
+        if err != nil {
+            http.Error(w, "Failed to save service account key: "+err.Error(), http.StatusInternalServerError)
+            return
+        }
+
+        http.Redirect(w, r, "/home", http.StatusSeeOther)
+        return
+    }
+
+    renderTemplate(w, "landing.html", nil)
+}
+
+
 func homeHandler(w http.ResponseWriter, r *http.Request) {
+    if serviceAccountKeyPath == "" {
+        http.Redirect(w, r, "/", http.StatusSeeOther)
+        return
+    }
+
     logger.Println("Received request for home page")
     projects, err := listProjects()
     if err != nil {
@@ -35,6 +74,10 @@ func homeHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func costRecommendationsHandler(w http.ResponseWriter, r *http.Request) {
+    if serviceAccountKeyPath == "" {
+        http.Redirect(w, r, "/", http.StatusSeeOther)
+        return
+    }
     if r.Method != http.MethodPost {
         http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
         return
@@ -84,6 +127,24 @@ func costRecommendationsHandler(w http.ResponseWriter, r *http.Request) {
     }
 
     renderTemplate(w, "recommendations.html", data)
+}
+
+func loadCredentials() ([]byte, error) {
+    if serviceAccountKeyPath == "" {
+        return nil, fmt.Errorf("SERVICE_ACCOUNT_KEY not set")
+    }
+
+    encodedCreds, err := ioutil.ReadFile(serviceAccountKeyPath)
+    if err != nil {
+        return nil, fmt.Errorf("failed to read service account key file: %v", err)
+    }
+
+    creds, err := base64.StdEncoding.DecodeString(string(encodedCreds))
+    if err != nil {
+        return nil, fmt.Errorf("failed to decode credentials: %v", err)
+    }
+
+    return creds, nil
 }
 
 func calculateTotalSavings(summaries []RecommenderSummary) float64 {
@@ -287,29 +348,6 @@ func listRegions(projectID string, creds []byte) ([]string, error) {
     return locations, nil
 }
 
-func loadCredentials() ([]byte, error) {
-    err := godotenv.Load()
-    if err != nil {
-        return nil, fmt.Errorf("error loading .env file: %v", err)
-    }
-
-    serviceAccountKeyPath := os.Getenv("SERVICE_ACCOUNT_KEY_PATH")
-    if serviceAccountKeyPath == "" {
-        return nil, fmt.Errorf("SERVICE_ACCOUNT_KEY_PATH not set")
-    }
-
-    encodedCreds, err := ioutil.ReadFile(serviceAccountKeyPath)
-    if err != nil {
-        return nil, fmt.Errorf("failed to read service account key file: %v", err)
-    }
-
-    creds, err := base64.StdEncoding.DecodeString(string(encodedCreds))
-    if err != nil {
-        return nil, fmt.Errorf("failed to decode credentials: %v", err)
-    }
-
-    return creds, nil
-}
 
 func renderTemplate(w http.ResponseWriter, tmplFile string, data interface{}) {
     tmpl, err := template.ParseFiles(tmplFile)
