@@ -10,6 +10,8 @@ import (
     "os"
     "strings"
     "sync"
+    "sort"
+
 
     "github.com/joho/godotenv"
     recommender "cloud.google.com/go/recommender/apiv1"
@@ -51,22 +53,45 @@ func costRecommendationsHandler(w http.ResponseWriter, r *http.Request) {
         return
     }
 
-    recommendations, err := listCostRecommendations(projectID, creds)
+    recommenderSummaries, err := listCostRecommendations(projectID, creds)
     if err != nil {
         logger.Printf("Error listing cost recommendations: %v", err)
         http.Error(w, "Failed to list cost recommendations: "+err.Error(), http.StatusInternalServerError)
         return
     }
 
+    // Convert map to slice for sorting
+    summaries := make([]RecommenderSummary, 0, len(recommenderSummaries))
+    for _, summary := range recommenderSummaries {
+        summaries = append(summaries, summary)
+    }
+
+    // Sort summaries by total savings (descending order)
+    sort.Slice(summaries, func(i, j int) bool {
+        return summaries[i].TotalSavings > summaries[j].TotalSavings
+    })
+
+    totalSavings := calculateTotalSavings(summaries)
+
     data := struct {
-        ProjectID       string
-        Recommendations []string
+        ProjectID            string
+        RecommenderSummaries []RecommenderSummary
+        TotalSavings         float64
     }{
-        ProjectID:       projectID,
-        Recommendations: recommendations,
+        ProjectID:            projectID,
+        RecommenderSummaries: summaries,
+        TotalSavings:         totalSavings,
     }
 
     renderTemplate(w, "recommendations.html", data)
+}
+
+func calculateTotalSavings(summaries []RecommenderSummary) float64 {
+    total := 0.0
+    for _, summary := range summaries {
+        total += summary.TotalSavings
+    }
+    return total
 }
 
 func listProjects() ([]string, error) {
@@ -107,7 +132,7 @@ func listProjects() ([]string, error) {
     return projects, nil
 }
 
-func listCostRecommendations(projectID string, creds []byte) ([]string, error) {
+func listCostRecommendations(projectID string, creds []byte) (map[string]RecommenderSummary, error) {
     ctx := context.Background()
     client, err := recommender.NewClient(ctx, option.WithCredentialsJSON(creds))
     if err != nil {
@@ -120,7 +145,7 @@ func listCostRecommendations(projectID string, creds []byte) ([]string, error) {
         return nil, fmt.Errorf("failed to list regions and zones: %v", err)
     }
 
-    var allRecommendations []string
+    recommenderSummaries := make(map[string]RecommenderSummary)
     var mutex sync.Mutex
     var wg sync.WaitGroup
 
@@ -131,7 +156,7 @@ func listCostRecommendations(projectID string, creds []byte) ([]string, error) {
         "google.compute.instance.IdleResourceRecommender",
     }
 
-    semaphore := make(chan struct{}, 10) // Limit concurrent goroutines
+    semaphore := make(chan struct{}, 20) // Limit concurrent goroutines
 
     for _, location := range locations {
         if !strings.HasPrefix(location, "us-") {
@@ -159,9 +184,21 @@ func listCostRecommendations(projectID string, creds []byte) ([]string, error) {
                         logger.Printf("Error fetching recommendation for location %s and recommender %s: %v", loc, recID, err)
                         continue
                     }
-                    recString := fmt.Sprintf("Location: %s, Recommender: %s, Description: %s, Priority: %s", loc, recID, recommendation.Description, recommendation.Priority)
+                    
+                    costSavings := extractCostSavings(recommendation)
+                    
                     mutex.Lock()
-                    allRecommendations = append(allRecommendations, recString)
+                    summary, ok := recommenderSummaries[recID]
+                    if !ok {
+                        summary = RecommenderSummary{
+                            Name:                recID,
+                            TotalSavings:        0,
+                            RecommendationCount: 0,
+                        }
+                    }
+                    summary.TotalSavings += costSavings
+                    summary.RecommendationCount++
+                    recommenderSummaries[recID] = summary
                     mutex.Unlock()
                 }
             }(location, recommenderID)
@@ -170,8 +207,41 @@ func listCostRecommendations(projectID string, creds []byte) ([]string, error) {
 
     wg.Wait()
 
-    logger.Printf("Found %d recommendations in total for project %s", len(allRecommendations), projectID)
-    return allRecommendations, nil
+    logger.Printf("Found recommendations for %d recommenders in project %s", len(recommenderSummaries), projectID)
+    return recommenderSummaries, nil
+}
+
+
+func extractCostSavings(recommendation *recommenderpb.Recommendation) float64 {
+    if recommendation.PrimaryImpact == nil {
+        return 0
+    }
+
+    switch impact := recommendation.PrimaryImpact.GetCategory(); impact {
+    case recommenderpb.Impact_COST:
+        costImpact := recommendation.PrimaryImpact.GetCostProjection()
+        if costImpact != nil && costImpact.Cost != nil {
+            // The Cost field is a *money.Money type
+            costAmount := costImpact.Cost
+            if costAmount.CurrencyCode == "USD" {
+                // Convert int64 units to float64
+                dollars := float64(costAmount.Units)
+                // Convert nanos to a fraction of a dollar
+                nanos := float64(costAmount.Nanos) / 1e9
+                // The cost in the recommendation is typically negative (a saving)
+                // so we return the negation to represent it as a positive saving
+                return -(dollars + nanos)
+            }
+        }
+    }
+
+    return 0
+}
+
+type RecommenderSummary struct {
+    Name                string
+    TotalSavings        float64
+    RecommendationCount int
 }
 
 
